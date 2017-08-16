@@ -74,7 +74,7 @@ IBus bus;
 ISubscriptionResult subscription;
 
 Action establishSubscription = () => {
-    bus.Subscribe<MyMessage>(message => Console.Log(message.ToString()));
+    subscription = bus.Subscribe<MyMessage>(message => Console.Log(message.ToString()));
 };
 
 Action<Exception, TimeSpan> onBreak = (exception, timespan) => subscription.Dispose();
