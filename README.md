@@ -6,7 +6,7 @@ An extension for EasyNetQ which allows you to execute message handlers within a 
 # Examples
 
 Retry messages 3 times before failing...
-```
+```c#
 var policy = Policy
     .Handle<Exception>()
     .Retry(3);
@@ -18,7 +18,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 ---
 
 Retry MySql deadlocks only...
-```
+```c#
 var policy = Policy
     .Handle<MySqlException>(error => error.Number == 1213) // 1213 = deadlock
     .RetryForever();
@@ -30,7 +30,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 ---
 
 Retry messages 5 times with an exponential backoff between attempts...
-```
+```c#
 var policy = Policy
     .Handle<Exception>()
     .WaitAndRetry(5, attempt => TimeSpan.FromSeconds(Math.Pow(2, attempt)));
@@ -42,7 +42,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 ---
 
 Set 5 second timeout for all message processing...
-```
+```c#
 var policy = Policy.Timeout(TimeSpan.FromSeconds(5));
 
 var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
@@ -52,7 +52,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 ---
 
 Combine policies...
-```
+```c#
 var deadlockRetryPolicy = Policy
     .Handle<MySqlException>(error => error.Number == 1213)
     .Retry(3);
@@ -69,7 +69,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 ---
 
 Circuit breaker...
-```
+```c#
 IBus bus;
 ISubscriptionResult subscription;
 
