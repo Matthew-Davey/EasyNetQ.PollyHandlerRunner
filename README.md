@@ -43,7 +43,7 @@ var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
 
 Set 5 second timeout for all message processing...
 ```
-var policy = Policy.Timeout(TimeSpan.FromSeconds(3));
+var policy = Policy.Timeout(TimeSpan.FromSeconds(5));
 
 var bus = RabbitHutch.CreateBus("host=localhost;username=guest;password=guest",
     registrar => registrar.UseMessageHandlerPolicy(policy));
