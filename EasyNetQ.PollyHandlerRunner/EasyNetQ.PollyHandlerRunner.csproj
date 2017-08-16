@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>EasyNetQ.PollyHandlerRunner</Title>
+    <PackageVersion>0.1.0</PackageVersion>
+    <Authors>Matt Davey</Authors>
+    <Description>An extension for EasyNetQ which allows you to execute message handlers within a Polly policy.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Matthew-Davey/EasyNetQ.PollyHandlerRunner/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Matthew-Davey/EasyNetQ.PollyHandlerRunner</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Matthew-Davey/EasyNetQ.PollyHandlerRunner.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) Matt Davey. All rights reserved.</Copyright>
+    <PackageTags>easynetq rabbitmq amqp polly retry exponential-backoff circuit-breaker resiliance fault-tolerance timeout bulkheads fallback</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.5\EasyNetQ.PollyHandlerRunner.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.5\EasyNetQ.PollyHandlerRunner.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyNetQ" Version="2.0.4" />
+    <PackageReference Include="Polly" Version="5.3.1" />
+  </ItemGroup>
+</Project>
