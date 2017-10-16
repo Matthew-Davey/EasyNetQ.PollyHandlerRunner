@@ -1,7 +1,7 @@
 # EasyNetQ.PollyHandlerRunner
 An extension for EasyNetQ which allows you to execute message handlers within a [Polly](http://www.thepollyproject.org/about/) policy.
 
-[![Build Status](https://travis-ci.org/Matthew-Davey/EasyNetQ.PollyHandlerRunner.svg?branch=master)](https://travis-ci.org/Matthew-Davey/EasyNetQ.PollyHandlerRunner) [![Nuget Downloads](https://img.shields.io/nuget/dt/EasyNetQ.PollyHandlerRunner.svg)](https://www.nuget.org/packages/EasyNetQ.PollyHandlerRunner/) [![Nuget Version](https://img.shields.io/nuget/v/EasyNetQ.PollyHandlerRunner.svg)](https://www.nuget.org/packages/EasyNetQ.PollyHandlerRunner/)
+[![Nuget Downloads](https://img.shields.io/nuget/dt/EasyNetQ.PollyHandlerRunner.svg)](https://www.nuget.org/packages/EasyNetQ.PollyHandlerRunner/) [![Nuget Version](https://img.shields.io/nuget/v/EasyNetQ.PollyHandlerRunner.svg)](https://www.nuget.org/packages/EasyNetQ.PollyHandlerRunner/)
 
 # Examples
 
